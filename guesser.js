@@ -14,10 +14,12 @@ window.onload = function() {
     }
     samples = result["samples"];
     getNewSample();
+    update_video();
 };
 
 function getNewSample() {
     i = 0;
+    cur_sample_id = randInt(samples.length);
     while (samples[cur_sample_id]["seen"] && i < samples.length) {
         cur_sample_id = randInt(samples.length)
         i++;
