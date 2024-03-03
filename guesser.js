@@ -17,7 +17,9 @@ window.onload = function() {
 };
 
 function getNewSample() {
-    cur_sample_id = randInt(samples.length)
+    while (samples[cur_sample_id]["seen"]) {
+        cur_sample_id = randInt(samples.length)
+    }
     song_video = document.getElementById("song_video");
     song_video.style.display = "none";
     song_video.src = "";
@@ -39,6 +41,7 @@ document.getElementById("submit").addEventListener("click", function () {
     guess = document.getElementById('guess_input').value;
     if (guess.toLowerCase() === samples[cur_sample_id]["name"].toLowerCase()) {
         display_song();
+        samples[cur_sample_id]["seen"] = true
         document.getElementById('guess_input').value = "";
     }
 });
