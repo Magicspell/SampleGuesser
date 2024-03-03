@@ -17,8 +17,10 @@ window.onload = function() {
 };
 
 function getNewSample() {
-    while (samples[cur_sample_id]["seen"]) {
+    i = 0;
+    while (samples[cur_sample_id]["seen"] && i < samples.length) {
         cur_sample_id = randInt(samples.length)
+        i++;
     }
     song_video = document.getElementById("song_video");
     song_video.style.display = "none";
