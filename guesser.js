@@ -18,7 +18,9 @@ window.onload = function() {
 
 function getNewSample() {
     cur_sample_id = randInt(samples.length)
-    document.getElementById("song_video").style.display = "none";
+    song_video = document.getElementById("song_video");
+    song_video.style.display = "none";
+    song_video.src = "";
     update_video();
 };
 
