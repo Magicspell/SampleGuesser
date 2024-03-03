@@ -28,9 +28,9 @@ function update_video() {
 }
 
 function display_song() {
-    song_video = document.getElementById("song_video"); 
-    song_video.style.display = "block";
+    song_video = document.getElementById("song_video");
     song_video.src = "https://www.youtube.com/embed/".concat(samples[cur_sample_id]["songURL"])
+    song_video.style.display = "block";
 }
 
 document.getElementById("submit").addEventListener("click", function () {
