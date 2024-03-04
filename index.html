@@ -1,9 +1,25 @@
 <html>
-    <h2>Guess the sample!</h2>
-    <iframe width="560" height="315" id="sample_video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <input type="text" id="guess_input">
-    <button id="submit">Submit</button>
-    <button id="get_new">New Sample</button>
-    <iframe width="560" height="315" id="song_video" style="display:'None';" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <link rel="stylesheet" href="main.css">
+
+    <div class="title-container">
+        <h1 class="title">Guess the sample!</h1>
+    </div>
+    
+    <div class="side-by-side">
+        <div class="video-container">
+            <iframe class="video" id="sample_video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    
+        <div class="video-container">
+            <iframe class="video" id="song_video" style="display:'None';" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="input-section">
+        <input type="text" id="guess_input">
+        <button id="submit">Submit</button>
+        <button id="get_new">New Sample</button>
+    </div>
+
     <script type="text/javascript" src="guesser.js"></script>
 </html>
